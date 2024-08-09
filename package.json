@@ -4,7 +4,14 @@
   "license": "MIT",
   "scripts": {
     "dev": "npx nx run shell-with-remotes:serve",
-    "dev:all": "npx nx run-many --target=serve --all=true"
+    "dev:all": "npx nx run-many --target=serve --all=true",
+    "build:remote1": "nx build remote1",
+    "build:remote2": "nx build remote2",
+    "build:shell": "nx build shell",
+    "build": "npm run build:remote1 && npm run build:remote2 && run build:shell",
+    "lint": "nx lint",
+    "test": "nx test",
+    "e2e": "nx e2e"
   },
   "private": true,
   "dependencies": {
